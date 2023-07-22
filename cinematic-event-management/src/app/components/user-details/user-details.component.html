@@ -1,0 +1,40 @@
+<!-- user-details.component.html -->
+
+<h2>User Details</h2>
+
+<form [formGroup]="userForm" (submit)="onSubmit()">
+  <label for="username">Username:</label>
+  <input type="text" id="username" formControlName="username" required>
+
+  <label for="status">User Status:</label>
+  <input type="checkbox" id="status" formControlName="status">
+
+  <label>Gender:</label>
+  <label>
+    <input type="radio" value="Male" formControlName="gender">
+    Male
+  </label>
+  <label>
+    <input type="radio" value="Female" formControlName="gender">
+    Female
+  </label>
+  <label>
+    <input type="radio" value="Other" formControlName="gender">
+    Other
+  </label>
+
+  <label for="membershipType">Membership Type:</label>
+  <select id="membershipType" formControlName="membershipType">
+    <option value="Regular">Regular</option>
+    <option value="Premium">Premium</option>
+    <option value="VIP">VIP</option>
+  </select>
+
+  <label for="bio">Bio:</label>
+  <textarea id="bio" formControlName="bio"></textarea>
+
+  <label for="dateOfBirth">Date of Birth:</label>
+  <input type="date" id="dateOfBirth" formControlName="dateOfBirth" required>
+
+  <button type="submit">Save</button>
+</form>

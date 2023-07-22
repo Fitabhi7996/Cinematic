@@ -1,10 +1,14 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// app.module.ts
 
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +18,14 @@ import { UserDetailsComponent } from './user-details/user-details.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'users', component: UserListComponent },
+      { path: 'users/:id', component: UserDetailsComponent },
+      { path: '', redirectTo: '/users', pathMatch: 'full' }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
