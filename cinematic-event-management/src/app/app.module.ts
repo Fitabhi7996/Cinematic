@@ -23,7 +23,7 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'users', component: UserListComponent },
-      { path: 'users/:id', component: UserDetailsComponent },
+      { path: 'users/:username', component: UserDetailsComponent },
       { path: '', redirectTo: '/users', pathMatch: 'full' }
     ])
   ],

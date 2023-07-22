@@ -8,15 +8,17 @@ import { User } from '../models/user.model';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  users!: User[]; // Add the definite assignment assertion here
+  users: User[] = []; // Initialize users as an empty array
 
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     this.userService.getUsers().subscribe((users) => {
+      console.log(users); // Check the response in the console
       this.users = users;
     });
   }
+  
 
   editUser(user: User): void {
     // Implement the edit functionality here
