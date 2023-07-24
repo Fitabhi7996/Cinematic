@@ -9,12 +9,16 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home-component/home-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +26,10 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
+      {path: "",component:HomeComponent},
       { path: 'users', component: UserListComponent },
-      { path: 'users/:username', component: UserDetailsComponent },
-      { path: '', redirectTo: '/users', pathMatch: 'full' }
+      { path: 'users/add', component: UserDetailsComponent },
+      { path: '', redirectTo: '', pathMatch: 'full' }
     ])
   ],
   providers: [],

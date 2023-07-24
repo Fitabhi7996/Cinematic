@@ -1,0 +1,50 @@
+/* user-list.css */
+h2 {
+    color: #ff3e6c;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  th {
+    background-color: #ff3e6c;
+    color: #fff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #ff3e6c;
+    color: #fff;
+  }
+  
+  button {
+    background-color: #ff3e6c;
+    color: #fff;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  button:hover {
+    background-color: #ff5f8c;
+  }
+  

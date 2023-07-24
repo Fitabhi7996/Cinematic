@@ -25,8 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/navbar/navbar.component.css",
+              "src/app/components/user-list/user-list.component.css",
+              "src/app/components/user-details/user-details.component.css",
+              "src/app/home-component/home-component.component.css"
             ],
+          
             "scripts": []
           },
           "configurations": {

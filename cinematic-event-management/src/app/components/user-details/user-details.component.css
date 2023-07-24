@@ -1,0 +1,63 @@
+/* user-details.css */
+h2 {
+    color: #ff3e6c;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 400px;
+    background-color: #fff ;
+    margin: 0 auto;
+    border: 1px solid #ff3e6c;
+    border-radius: 5%;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+    color: #ff3e6c;
+    font-size: 600;
+    margin: auto;
+  }
+  
+  input[type="text"],
+  textarea,
+  select {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ff3e6c;
+    border-radius: 4px;
+    color: #ff3e6c
+  }
+
+  option{
+    color: #ff3e6c
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-right: 5px;
+    color: #ff3e6c
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    display: block;
+    background-color: #ff3e6c;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #ff5f8c;
+  }
+  

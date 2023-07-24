@@ -1,0 +1,76 @@
+/* Add styles to the h2 heading */
+h2 {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Set background image for the entire page */
+  body {
+    background-image: url('https://content.instructables.com/FOA/QUTQ/HBNXUPID/FOAQUTQHBNXUPID.jpg?auto=webp&fit=bounds&frame=1&height=1024&width=1024auto=webp&frame=1&height=150');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Style the posters container */
+  .posters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    justify-items: center;
+     /* Set a semi-transparent background color for the container */
+    padding: 20px; /* Add some padding to the container */
+    border-radius: 10px; /* Add rounded corners to the container */
+  }
+  
+  /* Style each movie poster */
+  .poster {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative; /* Add position relative to the poster for absolute positioning of caption */
+  }
+  
+  .poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Add hover effect to movie posters */
+  .poster:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Add a caption for each poster */
+  .poster-caption {
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Show caption on hover */
+  .poster:hover .poster-caption {
+    opacity: 1;
+  }
+  
